@@ -1,0 +1,38 @@
+{
+  "title": "",
+  "defaultTitle": "Google (Clone)",
+  "titleTemplate": "%s - Google",
+  "noindex": false,
+  "nofollow": false,
+  "robotsProps": {},
+  "description": "",
+  "canonical": "",
+  "mobileAlternate": {
+    "media": "",
+    "href": ""
+  },
+  "languageAlternates": [],
+  "additionalMetaTags": [
+    {
+      "name": "keywords",
+      "content": ""
+    },
+    {
+      "name": "viewport",
+      "content": "initial-scale=1.0, width=device-width"
+    },
+    {
+      "name": "author",
+      "content": "SKILLFORCE"
+    }
+  ],
+  "additionalLinkTags": [],
+  "twitter": {
+    "cardType": "",
+    "site": "",
+    "handle": ""
+  },
+  "facebook": {
+    "appId": ""
+  }
+}
