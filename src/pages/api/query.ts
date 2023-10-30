@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fetch from 'node-fetch';
 
-// 定义一个接口来描述可能的响应数据
+// define an interface
 interface GoogleSearchResponse {
     error?: {
         code: number;
         message: string;
     };
-    // ... 其他可能的属性
+
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -15,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const cx = "e2797d1cfb2c9452b";
 
     if (req.method === 'GET') {
-        const query = req.query.q; // 假设你的查询参数名为q
+        const query = req.query.q;
 
         if (!query) {
             return res.status(400).json({ message: 'Query parameter q is required' });
@@ -25,7 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         try {
             const response = await fetch(endpoint);
-            // 使用类型断言来指定 data 的类型
+            // Use type assertions to specify the type of data
             const data = await response.json() as GoogleSearchResponse;
 
             if (data.error) {
