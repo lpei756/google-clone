@@ -1,23 +1,12 @@
-import App, {AppProps} from 'next/app';
-import SEO from '../../next-seo.config.json';
-import {DefaultSeo} from "next-seo";
+import Script from 'next/script';
 
-
-// styles
-import '@/globals.css';
-import Head from "next/head";
-import {Provider} from "react-redux";
-
-export default function MyApp({Component, pageProps}: AppProps) {
-
+function MyApp({ Component, pageProps }) {
     return (
         <>
-            <Head>
-                <link rel="icon" href="/favicon.ico"/>
-            </Head>
-            <DefaultSeo {...SEO} />
+            <Script src="https://cse.google.com/cse.js?cx=e2797d1cfb2c9452b" strategy="afterInteractive" />
             <Component {...pageProps} />
         </>
-    )
-
+    );
 }
+
+export default MyApp;
